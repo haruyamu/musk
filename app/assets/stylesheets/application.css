@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.post {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 60%;
+  margin: 30px auto;
+  height: 600px;
+  font-family: serif;
+  background-color: lightblue;
+}
+.new_post {
+  text-align: center;
+  margin-top: 40px;
+}
+.form {
+  margin: 20px auto;
+  text-align: center;
+}
+.form_title {
+  height: 50x;
+  margin: 0 auto;
+  width: 70%;
+}
+.field_title {
+  height: 50px;
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.form_place {
+  height: 50x;
+  margin: 0 auto;
+  width: 70%;
+}
+.field_place {
+  height: 50px;
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.form_content {
+  height: 50px;
+  margin: 0 auto;
+  width: 70%;
+}
+.field_content {
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.p_title {
+  font-size: 18px;
+}
+.p_height {
+  height: 250px;
+}
+.jump_link {
+  bottom: 0;
+  position: relative;
+}
