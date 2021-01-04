@@ -85,7 +85,7 @@ header {
   height: 160px;
   padding: 20px 10px;
   background-color: lightgray;
-  background-image: url(/image/book.jpeg);
+  background-image: url(/images/book.jpeg);
 }
 
 .letter {
@@ -116,7 +116,20 @@ header {
 .form_image {
   margin-bottom: 20px;
 }
-.image_size {
+.image_size,
+.books-image {
   width: 300px;
   height: 250px;
+}
+.box {
+  margin: 50px;
+  height: 500px;
+}
+.box-inner {
+  margin: auto;
+  font-family: serif;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 30%;
+  height: 400px;
 }

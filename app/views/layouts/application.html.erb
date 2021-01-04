@@ -16,6 +16,7 @@
       <div class="left-header">
         <h2 class="letter">Books</h2>
       </div>
+      <% if user_signed_in? %>
       <div class="right-header">
         <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |f| %>
         <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
@@ -25,6 +26,12 @@
         <%= link_to  "new post", new_post_path, class: "btn" %>
         <%= link_to  "profile", "#",class: "btn" %>
       </div>
+      <% else %>
+      <div class="right-header">
+        <%= link_to "新規登録", new_user_registration_path, class: "btn" %>
+        <%= link_to  "ログイン",new_user_session_path, class: "btn" %>
+      </div>
+      <% end %>
     </div>
   </header>
   <%= yield %>
