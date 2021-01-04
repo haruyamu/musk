@@ -11,6 +11,22 @@
 </head>
 
 <body>
+  <header>
+    <div class="top">
+      <div class="left-header">
+        <h2 class="letter">Books</h2>
+      </div>
+      <div class="right-header">
+        <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |f| %>
+        <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= f.submit "検索", class: "search-btn" %>
+        <% end %>
+        <%= link_to "book", "#", class: "btn" %>
+        <%= link_to  "new post", new_post_path, class: "btn" %>
+        <%= link_to  "profile", "#",class: "btn" %>
+      </div>
+    </div>
+  </header>
   <%= yield %>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

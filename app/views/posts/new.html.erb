@@ -13,10 +13,12 @@
     <div class="form_content">
       <%= f.text_area :content,class: "field_content",rows: 6,placeholder: "この投稿の詳細文を入力してください" %>
     </div>
+    <div class="form_image">
+      <%= f.file_field :image,class: "file_field" %>
+    </div>
     <div class="form_submit">
       <%= f.submit "Submit" %>
     </div>
-
     <% end %>
   </div>
 </div>

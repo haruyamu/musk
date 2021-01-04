@@ -26,7 +26,7 @@
         </h3>
         <%= link_to  "jump to page", post_path(@posts.ids), class: "jump_link" %>
       </div>
-      <%= image_tag p.image, class: "card-img-right flex-auto d-none d-lg-block" if p.image.attached?%>
+      <%= image_tag p.image, class: "card-img-right flex-auto d-none d-lg-block image_size" if p.image.attached?%>
     </div>
   </div>
   <%end%>
