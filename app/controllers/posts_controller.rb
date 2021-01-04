@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_params, only: %i[ edit update show destory]
   def index
     @posts = Post.all.order('created_at DESC')
   end
@@ -14,10 +15,30 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  
+  def edit; end
+
+  def update
+    if @post.update(post_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+  def show
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
+  end
+  
 
   private
   def create_params
-    params.require(:post).permit(:title,:place,:content,:image)
+    params.require(:post).permit(:title,:place,:content,:image).merge(user_id: current_user.id)
   end
+
+  def set_params
+    @post = Post.find(params[:id])
+  end
+  
   
 end

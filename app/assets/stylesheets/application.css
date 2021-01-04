@@ -132,4 +132,14 @@ header {
   border-radius: 5px;
   width: 30%;
   height: 400px;
+  font-size: 19px;
+}
+.form__btn {
+  margin-top: 20px;
+}
+.box_width {
+  width: 80%;
+}
+.box-login {
+  margin: 20px 0;
 }

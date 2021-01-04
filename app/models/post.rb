@@ -4,5 +4,10 @@ class Post < ApplicationRecord
     validates :title
     validates :place
     validates :content
+    validates :image
+    
+    belongs_to :user
+    has_many :comments
+    
    end
 end
