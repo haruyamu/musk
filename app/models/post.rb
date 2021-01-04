@@ -1,0 +1,8 @@
+class Post < ApplicationRecord
+   has_one_attached :image
+   with_options presence: true do
+    validates :title
+    validates :place
+    validates :content
+   end
+end
